@@ -20,17 +20,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px; /* Zmenšení mezer mezi prvky */
+    gap: 20px; 
     background-color: #141414;
-    padding: 30px 50px; /* Zmenšení paddingu */
+    padding: 30px 50px; 
     border-radius: 10px; 
 }
 
 .game-container {
     display: grid;
-    gap: 8px; /* Snížení mezer mezi kartami */
+    gap: 8px;
     background-color: #141414;
-    padding: 15px; /* Snížený padding */
+    padding: 15px; 
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -49,36 +49,41 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s;
-    border: 2px solid transparent; /* Přidáno pro ohraničení */
+    border: 2px solid transparent; 
 }
 
 .card:hover {
     background-color: #444;
 }
 
-
-
 h2 {
-    font-size: 1.5em; /* Mírně zvětšeno pro lepší čitelnost */
+    font-size: 1.5em; 
     color: white;
     text-transform: uppercase;
-    letter-spacing: 0.05em; /* Menší rozestup mezi písmeny */
-    margin-bottom: 10px; /* Přidání mírného spodního marginu */
+    letter-spacing: 0.05em; 
+    margin-bottom: 10px; 
 }
 
 .game-title {
-    font-size: 1.5em; /* Sjednoceno s h2 */
+    font-size: 1.5em; 
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
-    margin-bottom: 10px; /* Přidán spodní margin */
+    margin-bottom: 10px; 
 }
 
 .score-display {
-    font-size: 1.2em; /* Snížená velikost textu skóre */
+    font-size: 1.2em; 
     color: white;
-    margin-bottom: 15px; /* Snížený margin */
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+.countdown-display {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -149,31 +154,33 @@ h2 {
     justify-content: center;
     font-size: 40px;
     transition: transform 0.6s;
-
 }
 
 .card-front {
     background-color: #333333;
-    color: transparent; /* Skryje text přední strany */
+    color: transparent;
 }
 
 .card-back {
     background-color: #7a7a7a;
     color: white;
-    transform: rotateY(180deg); /* Zadní strana je otočená */
+    transform: rotateY(180deg);
 }
 
 .card.flipped .card-front {
-    transform: rotateY(180deg); /* Přední strana se otočí */
+    transform: rotateY(180deg); 
 }
 
 .card.flipped .card-back {
-    transform: rotateY(0deg); /* Zadní strana se objeví */
+    transform: rotateY(0deg); 
 }
 
-.countdown-display {
-    font-size: 1.5em;
-    color: white;
-    margin-bottom: 15px;
-    text-align: center;
+#player1-score, #player2-score {
+    font-size: 1.2em;
+    transition: font-weight 0.3s ease;
+}
+
+#current-player {
+    font-weight: bold;
+    color: #ff5722; /* Oranžová barva pro zvýraznění */
 }
